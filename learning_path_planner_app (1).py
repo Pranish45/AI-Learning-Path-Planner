@@ -25,18 +25,18 @@ with st.form("learning_path_form"):
 if submit:
     with st.spinner("Generating your plan with Gemini..."):
         prompt = f"""
-Create a unique {duration}-week learning path for the topic: {subject}.
-The learner's goals or preferences include: {interests}.
-
-Each week's plan should include:
-- Core Concepts: Key topics to focus on that week.
-- Practice: Hands-on exercises, projects, or coding tasks.
-- Resources: Recommended videos, tutorials, or articles.
-- Reflection: What to revise or journal about at the end of the week.
-
-Ensure each week builds on the last, gradually increasing in difficulty.
-Format the response in a structured weekly layout.
-"""
+        Create a unique {duration}-week learning path for the topic: {subject}.
+        The learner's goals or preferences include: {interests}.
+        
+        Each week's plan should include:
+        - Core Concepts: Key topics to focus on that week.
+        - Practice: Hands-on exercises, projects, or coding tasks.
+        - Resources: Recommended videos, tutorials, or articles.
+        - Reflection: What to revise or journal about at the end of the week.
+        
+        Ensure each week builds on the last, gradually increasing in difficulty.
+        Format the response in a structured weekly layout.
+        """
         response = model.generate_content(prompt)
         st.subheader("📅 Your Personalized Learning Path")
         st.markdown(response.text)
