@@ -33,7 +33,8 @@ if submit:
         - Practice: Hands-on exercises, projects, or coding tasks.
         - Resources: Recommended videos, tutorials, or articles.
         - Reflection: What to revise or journal about at the end of the week.
-        
+
+        Provide in a tabular format as well.
         Ensure each week builds on the last, gradually increasing in difficulty.
         Format the response in a structured weekly layout.
         """
