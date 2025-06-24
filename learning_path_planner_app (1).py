@@ -1,9 +1,9 @@
 import streamlit as st
 import google.generativeai as genai
 
-st.set_page_config(page_title="AI Learning Path Planner (Gemini)", page_icon="📘")
-st.title("📘 Gemini Learning Path Planner")
-st.markdown("Use Google Gemini to generate a custom weekly learning roadmap.")
+st.set_page_config(page_title="AI Learning Path Planner", page_icon="📘")
+st.title("📘 AI Learning Path Planner")
+st.markdown("Use AI to generate a custom weekly learning roadmap.")
 
 # Get the Gemini API key securely
 api_key = st.secrets.get("GEMINI_API_KEY", "")
@@ -23,7 +23,7 @@ with st.form("learning_path_form"):
     submit = st.form_submit_button("Generate Learning Plan")
 
 if submit:
-    with st.spinner("Generating your plan with Gemini..."):
+    with st.spinner("Generating your plan with AI..."):
         prompt = f"""
         Create a unique {duration}-week learning path for the topic: {subject}.
         The learner's goals or preferences include: {interests}.
